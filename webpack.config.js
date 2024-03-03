@@ -14,7 +14,8 @@ module.exports={
                     
                         loader:'html-loader',
                         Options:{
-                            attributes: false
+                            attributes: false,
+                            source:false
                         },
                     
                     }
