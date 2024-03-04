@@ -29,7 +29,7 @@ const webpack = require('webpack'); //to access built-in plugins
 module.exports = {
   mode: 'production',
   module: {
-    rules: [{ test: /\.txt$/, use: 'raw-loader' }],
+    rules: [{ test: /\.html$/, use: 'html-loader' }],
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
 };
