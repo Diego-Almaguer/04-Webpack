@@ -18,6 +18,11 @@ module.exports = {
                       test:/style.css$/,
                       use:[MiniCssExtractPlugin.loader, 'css-loader']
                     
+                    },
+                    {
+                      test:/\.(png|jpe?g|gif)$/,
+                      loader:'file-loader'
+                    
                     }
 
                 ]
@@ -40,17 +45,30 @@ module.exports = {
     rules: [{ test: /\.html$/, use: 'html-loader' },
               
 
-    {
-      test:/\.css$/,
-      use:['style-loader','css-loader']
+            {
+              test:/\.css$/,
+              exclude:/style.css$/,
+              use:['style-loader','css-loader']
 
-    }
+            },
   
+            {
+              test:/style.css$/,
+              use:[MiniCssExtractPlugin.loader, 'css-loader']
+    
+            },
+            {
+              test:/\.(png|jpe?g|gif)$/,
+              loader:'file-loader'
+            
+            }
   
-  
-  ]
+    ]
+ 
   },
+  optimization:{},
+
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' }),
 
-            new MiniCssExtractPlugin({filename:'nuevo-estilo.css', ignoreOrder:false})]
+            new MiniCssExtractPlugin({filename:'[name].css', ignoreOrder:false})]
 };
