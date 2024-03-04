@@ -1,4 +1,4 @@
-import '../css/componentes.css'
+import '../js/css/componentes.css'
 
 export const saludar =(nombre)=>{
 
