@@ -5,13 +5,13 @@ module.exports = {
     filename: 'my-first-webpack.bundle.js',
   },
   module: {
-            rules: [{ test: /\.txt$/, use: 'raw-loader' },
+            rules: [{ test: /\.html$/, use: 'html-loader' },
   
-                  {
-                    test:/\.css$/,
-                    use:['style-loader','css-loader']
+                    {
+                      test:/\.css$/,
+                      use:['style-loader','css-loader']
 
-                  }
+                    }
 
                 ]
 
