@@ -8,8 +8,8 @@ export const saludar =(nombre)=>{
     h1.innerText=`Hola ${nombre}`;
     document.body.append(h1);
 
-
-    const img=document.createElement("img"); 
+      console.log(webpackLogo);
+    const img=document.createElement('img'); 
     img.src=webpackLogo
     img.body.append(img)
 }
