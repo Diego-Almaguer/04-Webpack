@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   output: {
@@ -9,8 +10,14 @@ module.exports = {
   
                     {
                       test:/\.css$/,
+                      exclude:/style.css$/,
                       use:['style-loader','css-loader']
 
+                    },
+                    {
+                      test:/style.css$/,
+                      use:[MiniCssExtractPlugin.loader, 'css-loader']
+                    
                     }
 
                 ]
@@ -25,6 +32,7 @@ module.exports = {
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack'); //to access built-in plugins
+
 
 module.exports = {
   mode: 'production',
@@ -42,5 +50,7 @@ module.exports = {
   
   ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' }),
+
+            new MiniCssExtractPlugin({filename:'nuevo-estilo.css', ignoreOrder:false})]
 };
