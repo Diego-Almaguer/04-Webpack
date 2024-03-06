@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config  webpack.config.js",
+    "build": "webpack --config  webpack.prod.js",
     "start": "webpack serve --config  webpack.config.js --open --port=8080 "
   },
   "author": "Diego Almaguer",
   "license": "ISC",
   "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.10.0",
     "file-loader": "^6.2.0",
     "html-loader": "^5.0.0",
