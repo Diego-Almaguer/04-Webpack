@@ -1,10 +1,7 @@
-import './style.css';
-import { Todo } from './js/classes/todo.class';
-import { TodoList } from './js/classes/todo-list.class';
+import { Heroe } from '../src/js/componentes';
+import './styles.css';
 
-const tarea=new  Todo('Aprender javascript');
 
-const todoList=new TodoList();
-todoList.nuevoTodo(tarea);
+const heroe = new Heroe ('Spiderman')
 
-console.log(todoList);
+console.log(heroe);
