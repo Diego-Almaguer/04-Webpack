@@ -1,8 +1,5 @@
-import '../css/componentes.css';
 
-
-
-export class Heroe{
+export class Alumno{
 
 constructor(id,nombre){
 

@@ -1,7 +1,15 @@
-import { Heroe } from '../src/js/componentes';
+import { Alumno } from './js/alumnos';
+import { AlumnosLista } from '../src/js/alumnos-lista';
 import './styles.css';
 
 
-const heroe = new Heroe ('Spiderman')
 
-console.log(heroe);
+
+export const lista=new AlumnosLista()
+
+
+
+
+console.log(lista);
+
+
